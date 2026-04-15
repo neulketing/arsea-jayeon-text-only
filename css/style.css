@@ -1847,11 +1847,14 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
 }
 .float-btn:hover { transform: translateY(-3px) scale(1.08); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
-.float-chat { background: #0063ff; }
+.float-instagram { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.float-line { background: #06c755; }
+.float-whatsapp { background: #25d366; }
 .float-kakao { background: #fee500; }
+.float-naver { background: #03c75a; }
 
-/* Chat button pulse */
-.float-chat {
+/* Bottom button pulse */
+.float-btns .float-btn:last-child {
   animation: ctaPulse 3s ease-in-out infinite;
 }
 
