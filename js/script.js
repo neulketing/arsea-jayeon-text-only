@@ -1,5 +1,5 @@
 /* ============================================================
-   ARSEA CLONE - script.js
+   ARSEA CLONE - script.js  (Enhanced Motion Edition)
    ============================================================ */
 
 // ── Hero Swiper ────────────────────────────────────────────
@@ -19,7 +19,6 @@ const heroSwiper = new Swiper('.hero-swiper', {
   },
   on: {
     slideChangeTransitionStart() {
-      // Re-trigger hero content animations
       const slide = this.slides[this.activeIndex];
       const badge = slide.querySelector('.hero-badge');
       const title = slide.querySelector('.hero-title');
@@ -30,7 +29,7 @@ const heroSwiper = new Swiper('.hero-swiper', {
       [badge, title, desc].forEach(el => {
         if (!el) return;
         el.style.animation = 'none';
-        el.offsetHeight; // reflow
+        el.offsetHeight;
         el.style.animation = '';
       });
     }
@@ -77,6 +76,13 @@ function updateGlobalUi() {
   updateActiveNav();
 }
 
+// ── Floating Buttons Scroll Reveal ─────────────────────────
+const floatBtns = document.querySelector('.float-btns');
+function updateFloatBtns() {
+  if (!floatBtns) return;
+  floatBtns.classList.toggle('visible', window.scrollY > 300);
+}
+
 // ── Mobile Menu ────────────────────────────────────────────
 const menuBtn  = document.getElementById('mobileMenuBtn');
 const mobileNav = document.getElementById('mobileNav');
@@ -91,7 +97,6 @@ menuBtn.addEventListener('click', () => {
   setMobileMenuState(!mobileNav.classList.contains('open'));
 });
 
-// Close mobile nav on link click
 mobileNav.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
     setMobileMenuState(false);
@@ -104,7 +109,7 @@ window.addEventListener('resize', () => {
   }
 });
 
-// ── Hero Micro Motion ──────────────────────────────────────
+// ── Hero Micro Motion (Parallax) ───────────────────────────
 const heroSection = document.getElementById('hero');
 let heroFrame = null;
 let heroOffsetX = 0;
@@ -139,6 +144,22 @@ if (heroSection) {
   });
 }
 
+// ── Hero Particles ─────────────────────────────────────────
+function createHeroParticles() {
+  const container = document.querySelector('.hero-particles');
+  if (!container || window.innerWidth <= 768) return;
+  const count = 18;
+  for (let i = 0; i < count; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'hero-particle';
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDuration = `${8 + Math.random() * 12}s`;
+    particle.style.animationDelay = `${Math.random() * 10}s`;
+    particle.style.width = particle.style.height = `${3 + Math.random() * 5}px`;
+    container.appendChild(particle);
+  }
+}
+
 // Pause autoplay while hovering a slider
 function bindAutoplayHover(containerSelector, swiperInstance) {
   const container = document.querySelector(containerSelector);
@@ -150,36 +171,38 @@ function bindAutoplayHover(containerSelector, swiperInstance) {
 bindAutoplayHover('.hero-swiper', heroSwiper);
 bindAutoplayHover('.review-img-swiper', reviewSwiper);
 
-// ── FAQ Accordion ──────────────────────────────────────────
+// ── FAQ Accordion (smooth) ─────────────────────────────────
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item');
   const isActive = item.classList.contains('active');
 
-  // Close all
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+  // Close all with animation
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('active');
+  });
 
   // Toggle current
-  if (!isActive) item.classList.add('active');
+  if (!isActive) {
+    item.classList.add('active');
+  }
 }
 
 // ── Multi-Step Form ────────────────────────────────────────
 let currentStep = 1;
 
 function goToStep(step) {
-  // Validate current step
   if (step > currentStep && !validateStep(currentStep)) return;
 
-  // Hide current page
   document.getElementById(`step${currentStep}`).classList.remove('active');
 
-  // Update step indicators
+  // Update step indicators with animation
   document.querySelectorAll('.form-step').forEach((el, i) => {
     const num = el.querySelector('.step-num');
     const idx = i + 1;
     el.classList.remove('active');
     num.classList.remove('active-num', 'done');
 
-    if (idx < step) { num.classList.add('done'); num.textContent = '✓'; }
+    if (idx < step) { num.classList.add('done'); num.textContent = '\u2713'; }
     else if (idx === step) {
       el.classList.add('active');
       num.classList.add('active-num');
@@ -189,38 +212,45 @@ function goToStep(step) {
     }
   });
 
+  // Animate step dividers
+  document.querySelectorAll('.step-divider').forEach((div, i) => {
+    const after = div.querySelector('::after') || div;
+    if (i < step - 1) {
+      div.style.setProperty('--fill', '1');
+      div.classList.add('filled');
+    } else {
+      div.style.setProperty('--fill', '0');
+      div.classList.remove('filled');
+    }
+  });
+
   currentStep = step;
   document.getElementById(`step${currentStep}`).classList.add('active');
 }
 
 function validateStep(step) {
   const page = document.getElementById(`step${step}`);
-  const required = page.querySelectorAll('input[type="text"], input[type="email"], select, textarea');
-  let valid = true;
 
-  required.forEach(el => {
-    el.style.borderColor = '';
-    if (el.closest('.phone-group') || el.type === 'date') return; // skip optional
-    if (el.tagName === 'SELECT' && el.value === '') {
-      el.style.borderColor = '#ff4444';
-      valid = false;
-    } else if (el.value.trim() === '' && el.placeholder !== '희망 예산을 입력해주세요') {
-      // Only validate required fields
-    }
-  });
-
-  // Check name field on step 1
   if (step === 1) {
     const nameInput = page.querySelector('input[type="text"]');
     if (nameInput && nameInput.value.trim() === '') {
       nameInput.style.borderColor = '#ff4444';
+      nameInput.style.boxShadow = '0 0 0 3px rgba(255,68,68,0.08)';
       nameInput.focus();
+      // Shake animation
+      nameInput.style.animation = 'none';
+      nameInput.offsetHeight;
+      nameInput.style.animation = 'shake 0.4s ease';
       return false;
     }
     const emailInput = page.querySelector('input[type="email"]');
     if (emailInput && emailInput.value.trim() === '') {
       emailInput.style.borderColor = '#ff4444';
+      emailInput.style.boxShadow = '0 0 0 3px rgba(255,68,68,0.08)';
       emailInput.focus();
+      emailInput.style.animation = 'none';
+      emailInput.offsetHeight;
+      emailInput.style.animation = 'shake 0.4s ease';
       return false;
     }
   }
@@ -228,13 +258,40 @@ function validateStep(step) {
   return true;
 }
 
+// Add shake keyframe dynamically
+const shakeStyle = document.createElement('style');
+shakeStyle.textContent = `
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+  }
+`;
+document.head.appendChild(shakeStyle);
+
+// Reset border on focus
+document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(el => {
+  el.addEventListener('focus', () => {
+    el.style.borderColor = '#0063ff';
+    el.style.boxShadow = '0 0 0 3px rgba(0,99,255,0.08)';
+    el.style.animation = '';
+  });
+  el.addEventListener('blur', () => {
+    if (el.style.borderColor === 'rgb(255, 68, 68)') return;
+    el.style.borderColor = '#e0e0e0';
+    el.style.boxShadow = '';
+  });
+});
+
 function submitForm() {
   const agreeCheckbox = document.getElementById('agreePrivacy');
   if (!agreeCheckbox.checked) {
-    alert('개인정보 수집 및 상담 안내에 동의해주세요.');
+    alert('\uac1c\uc778\uc815\ubcf4 \uc218\uc9d1 \ubc0f \uc0c1\ub2f4 \uc548\ub0b4\uc5d0 \ub3d9\uc758\ud574\uc8fc\uc138\uc694.');
     return;
   }
-  alert('상담 신청이 접수되었습니다!\n영업일 기준 1~2일 내에 예약 안내 연락을 드리겠습니다.');
+  alert('\uc0c1\ub2f4 \uc2e0\uccad\uc774 \uc811\uc218\ub418\uc5c8\uc2b5\ub2c8\ub2e4!\n\uc601\uc5c5\uc77c \uae30\uc900 1~2\uc77c \ub0b4\uc5d0 \uc608\uc57d \uc548\ub0b4 \uc5f0\ub77d\uc744 \ub4dc\ub9ac\uaca0\uc2b5\ub2c8\ub2e4.');
 }
 
 // ── Portfolio Horizontal Drag Scroll ──────────────────────
@@ -264,25 +321,107 @@ if (portfolioScroll) {
   }, { passive: false });
 }
 
-// ── Scroll Reveal ──────────────────────────────────────────
+// ── Enhanced Scroll Reveal ─────────────────────────────────
 const revealEls = document.querySelectorAll('.diff-card, .service-card, .process-step, .director-media, .director-card, .faq-item, .portfolio-item');
 revealEls.forEach(el => el.classList.add('reveal'));
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, 80);
-      observer.unobserve(entry.target);
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-revealEls.forEach((el, i) => {
-  el.style.transitionDelay = `${(i % 3) * 0.1}s`;
-  observer.observe(el);
+// Stagger based on sibling index within parent
+revealEls.forEach(el => {
+  const parent = el.parentElement;
+  const siblings = Array.from(parent.children).filter(c => c.classList.contains('reveal'));
+  const idx = siblings.indexOf(el);
+  el.style.transitionDelay = `${idx * 0.08}s`;
+  revealObserver.observe(el);
 });
+
+// ── Section-level reveal for headers ───────────────────────
+const sectionRevealEls = document.querySelectorAll('.section-reveal');
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      sectionObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+
+sectionRevealEls.forEach(el => sectionObserver.observe(el));
+
+// ── Card Mouse Tracking (radial glow) ─────────────────────
+document.querySelectorAll('.diff-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    card.style.setProperty('--mouse-x', `${x}%`);
+    card.style.setProperty('--mouse-y', `${y}%`);
+  });
+});
+
+// ── Magnetic Button Effect ─────────────────────────────────
+function initMagneticButtons() {
+  if (window.innerWidth <= 768 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const magneticBtns = document.querySelectorAll('.btn-cta, .btn-kakao, .btn-director, .btn-portfolio, .btn-review-more');
+
+  magneticBtns.forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.2}px)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+      btn.style.transition = 'transform 0.4s cubic-bezier(0.22,1,0.36,1)';
+      setTimeout(() => { btn.style.transition = ''; }, 400);
+    });
+  });
+}
+
+// ── Parallax on scroll for sections ────────────────────────
+function initScrollParallax() {
+  if (window.innerWidth <= 768 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const parallaxElements = [
+    { selector: '.float-tags', speed: 0.04 },
+    { selector: '.contact-emblem', speed: 0.06 },
+    { selector: '.director-photo-wrap', speed: 0.03 },
+  ];
+
+  let ticking = false;
+
+  function updateParallax() {
+    ticking = false;
+    const scrollY = window.scrollY;
+
+    parallaxElements.forEach(({ selector, speed }) => {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      const offset = (rect.top - window.innerHeight / 2) * speed;
+      el.style.transform = `translateY(${offset}px)`;
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+}
 
 // ── Smooth scroll for nav links ────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -295,5 +434,33 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-window.addEventListener('scroll', updateGlobalUi, { passive: true });
+// ── Typed text effect for hero (subtle) ────────────────────
+function initHeroTextEffect() {
+  const badges = document.querySelectorAll('.hero-badge');
+  badges.forEach(badge => {
+    badge.style.opacity = '0';
+    badge.style.transform = 'translateY(10px) scale(0.95)';
+  });
+
+  setTimeout(() => {
+    const activeBadge = document.querySelector('.swiper-slide-active .hero-badge');
+    if (activeBadge) {
+      activeBadge.style.transition = 'opacity 0.5s ease, transform 0.5s cubic-bezier(0.22,1,0.36,1)';
+      activeBadge.style.opacity = '1';
+      activeBadge.style.transform = 'translateY(0) scale(1)';
+    }
+  }, 300);
+}
+
+// ── Init ───────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  updateGlobalUi();
+  updateFloatBtns();
+}, { passive: true });
+
 updateGlobalUi();
+updateFloatBtns();
+createHeroParticles();
+initMagneticButtons();
+initScrollParallax();
+initHeroTextEffect();

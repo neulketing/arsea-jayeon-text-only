@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "arsea-clone",
+      "name": "jayeon-dev",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8092", "--directory", "/Users/shwanbook/antigravity/arsea-clone"],
-      "port": 8092
+      "runtimeArgs": ["-m", "http.server", "8093", "--directory", "/Users/shwanbook/antigravity/arsea-jayeon-text-only"],
+      "port": 8093
     }
   ]
 }
