@@ -422,51 +422,7 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   box-shadow: 0 14px 28px rgba(0,99,255,0.25);
   z-index: 2;
 }
-.tag-outline {
-  background: transparent;
-  color: rgba(255,255,255,0.7);
-  border: 1px solid rgba(255,255,255,0.15);
-  backdrop-filter: blur(4px);
-}
-.tag-blue-sm {
-  background: rgba(0,99,255,0.2);
-  color: #5aa0ff;
-  border: 1px solid rgba(0,99,255,0.3);
-}
-
-.float-tags {
-  position: relative;
-  height: auto;
-  margin-bottom: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tag {
-  --tag-rotate: 0deg;
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 500;
-  position: relative;
-  white-space: nowrap;
-  font-family: 'KoPub Dotum', sans-serif;
-  box-shadow: none;
-  transform: none;
-  animation: tagFadeFloat 5s ease-in-out infinite;
-  transition: background 0.3s ease, border-color 0.3s ease;
-}
-.tag:hover {
-  background: rgba(0,99,255,0.1);
-  border-color: rgba(0,99,255,0.4);
-}
-
-.tag:nth-child(1) { animation-delay: 0s; }
-.tag:nth-child(2) { animation-delay: -1.2s; }
-.tag:nth-child(3) { animation-delay: -2.5s; }
-.tag:nth-child(4) { animation-delay: -3.8s; }
+/* Float tags removed — replaced by diff-magazine layout */
 
 .diff-label {
   color: #0063ff;
@@ -485,70 +441,105 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   margin-bottom: 20px;
 }
 
-.diff-title-row {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-bottom: 20px;
+/* Magazine-style photo overlay */
+.diff-magazine {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  max-height: 580px;
 }
-
-.diff-avatar {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-.diff-avatar img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.diff-mag-photo {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
-  border: 3px solid rgba(0,99,255,0.5);
-  box-shadow: 0 0 0 6px rgba(0,99,255,0.1), 0 12px 30px rgba(0,0,0,0.3);
-  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
 }
-.diff-avatar:hover img {
-  transform: scale(1.06);
-  box-shadow: 0 0 0 6px rgba(0,99,255,0.2), 0 16px 36px rgba(0,99,255,0.25);
+.diff-magazine:hover .diff-mag-photo {
+  transform: scale(1.04);
 }
-.diff-avatar-label {
+.diff-mag-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.75) 100%);
+  pointer-events: none;
+}
+.diff-mag-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 36px 32px;
+  z-index: 2;
+}
+.diff-mag-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.diff-mag-tags span {
   font-size: 11px;
-  color: rgba(255,255,255,0.5);
-  text-align: center;
-  line-height: 1.4;
   font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+}
+.diff-mag-tag-accent {
+  background: rgba(0,99,255,0.3) !important;
+  color: #fff !important;
+  border-color: rgba(0,99,255,0.4) !important;
+}
+.diff-mag-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(0,163,255,0.9);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 8px;
+}
+.diff-mag-title {
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.diff-mag-title span {
+  color: #5eb8ff;
+}
+.diff-mag-name {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
-
-.diff-title-row .diff-label { margin-bottom: 10px; }
-.diff-title-row .diff-title { margin-bottom: 0; }
-
-.diff-desc {
-  font-size: 15px;
-  color: #888;
-  line-height: 1.8;
-  margin-bottom: 28px;
-}
-
-.diff-cta {
+.diff-mag-cta {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 14px 28px;
-  border: 1.5px solid rgba(0,99,255,0.5);
+  gap: 6px;
+  padding: 11px 22px;
+  border: 1.5px solid rgba(255,255,255,0.25);
   color: #fff;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.06);
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
 }
-.diff-cta:hover {
-  background: rgba(0,99,255,0.15);
-  border-color: #0063ff;
+.diff-mag-cta:hover {
+  background: rgba(0,99,255,0.2);
+  border-color: rgba(0,99,255,0.5);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,99,255,0.2);
 }
 
 .diff-right {
@@ -1858,9 +1849,9 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   .swiper-button-prev, .swiper-button-next { width: 42px; height: 42px; }
 
   .diff-inner { grid-template-columns: 1fr; gap: 40px; }
-  .diff-title-row { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .diff-avatar { flex-direction: row; gap: 12px; }
-  .diff-avatar img { width: 64px; height: 64px; }
+  .diff-magazine { aspect-ratio: 3 / 4; max-height: 480px; }
+  .diff-mag-content { padding: 28px 20px; }
+  .diff-mag-title { font-size: 22px; }
 
   .portfolio-scroll-wrap { padding: 0 20px 20px; }
   .portfolio-header { padding: 0 20px; }
