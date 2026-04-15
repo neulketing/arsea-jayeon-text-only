@@ -1,0 +1,989 @@
+[
+  {
+    "index": 1,
+    "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=1C363931B3A047D49CD88C28BC48F890&MUID=35E08A15D7346B1E14429D29D61D6A97",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/c.clarity.ms/c__q_30ecac89.gif",
+    "status": "saved",
+    "size": 42
+  },
+  {
+    "index": 2,
+    "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=55681C6AD2884F3EA8A1ECC43663171E&MUID=0DAE9ADA5D5461F038568DE65C7D602C",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/c.clarity.ms/c__q_a859048e.gif",
+    "status": "saved",
+    "size": 42
+  },
+  {
+    "index": 3,
+    "url": "https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg",
+    "status": "saved",
+    "size": 6225
+  },
+  {
+    "index": 4,
+    "url": "https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&1i7153983&2i3250128&2e1&3u15&4m2&1u498&2u600&5m6&1e0&5sko&6skr&10b1&12b1&14i47083502&8e1&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=109258",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/maps.googleapis.com/maps/api/js/StaticMapService__q_9008f5ad.GetMapImage",
+    "status": "saved",
+    "size": 106394
+  },
+  {
+    "index": 5,
+    "url": "https://maps.gstatic.com/mapfiles/openhand_8_8.cur",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/maps.gstatic.com/mapfiles/openhand_8_8.cur",
+    "status": "saved",
+    "size": 326
+  },
+  {
+    "index": 6,
+    "url": "https://nb-skin.com/img/4.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/4.jpg",
+    "status": "saved",
+    "size": 826264
+  },
+  {
+    "index": 7,
+    "url": "https://nb-skin.com/img/5.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/5.jpg",
+    "status": "saved",
+    "size": 213995
+  },
+  {
+    "index": 8,
+    "url": "https://nb-skin.com/img/all.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/all.png",
+    "status": "saved",
+    "size": 2829
+  },
+  {
+    "index": 9,
+    "url": "https://nb-skin.com/img/btn_next.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/btn_next.png",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "index": 10,
+    "url": "https://nb-skin.com/img/btn_prev.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/btn_prev.png",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "index": 11,
+    "url": "https://nb-skin.com/img/captcha.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/captcha.png",
+    "status": "saved",
+    "size": 19945
+  },
+  {
+    "index": 12,
+    "url": "https://nb-skin.com/img/dc_img4.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/dc_img4.jpg",
+    "status": "saved",
+    "size": 111494
+  },
+  {
+    "index": 13,
+    "url": "https://nb-skin.com/img/ev_bg2.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/ev_bg2.jpg",
+    "status": "saved",
+    "size": 206185
+  },
+  {
+    "index": 14,
+    "url": "https://nb-skin.com/img/favicon.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/favicon.png",
+    "status": "saved",
+    "size": 19875
+  },
+  {
+    "index": 15,
+    "url": "https://nb-skin.com/img/icon_top_w.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/icon_top_w.png",
+    "status": "saved",
+    "size": 21871
+  },
+  {
+    "index": 16,
+    "url": "https://nb-skin.com/img/iconm1.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/iconm1.png",
+    "status": "saved",
+    "size": 2164
+  },
+  {
+    "index": 17,
+    "url": "https://nb-skin.com/img/iconm2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/iconm2.png",
+    "status": "saved",
+    "size": 1414
+  },
+  {
+    "index": 18,
+    "url": "https://nb-skin.com/img/iconm3.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/iconm3.png",
+    "status": "saved",
+    "size": 2190
+  },
+  {
+    "index": 19,
+    "url": "https://nb-skin.com/img/iconm4.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/iconm4.png",
+    "status": "saved",
+    "size": 1730
+  },
+  {
+    "index": 20,
+    "url": "https://nb-skin.com/img/iconm5.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/iconm5.png",
+    "status": "saved",
+    "size": 1486
+  },
+  {
+    "index": 21,
+    "url": "https://nb-skin.com/img/iconm6.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/iconm6.png",
+    "status": "saved",
+    "size": 1764
+  },
+  {
+    "index": 22,
+    "url": "https://nb-skin.com/img/kakao.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/kakao.jpg",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "index": 23,
+    "url": "https://nb-skin.com/img/kakao.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/kakao.png",
+    "status": "saved",
+    "size": 804
+  },
+  {
+    "index": 24,
+    "url": "https://nb-skin.com/img/kpay.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/kpay.png",
+    "status": "saved",
+    "size": 2697
+  },
+  {
+    "index": 25,
+    "url": "https://nb-skin.com/img/logo.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/logo.png",
+    "status": "saved",
+    "size": 9536
+  },
+  {
+    "index": 26,
+    "url": "https://nb-skin.com/img/logo_w.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/logo_w.png",
+    "status": "saved",
+    "size": 7294
+  },
+  {
+    "index": 27,
+    "url": "https://nb-skin.com/img/logo_w_new.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/logo_w_new.png",
+    "status": "saved",
+    "size": 19390
+  },
+  {
+    "index": 28,
+    "url": "https://nb-skin.com/img/lpay_logo.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/lpay_logo.png",
+    "status": "saved",
+    "size": 1393
+  },
+  {
+    "index": 29,
+    "url": "https://nb-skin.com/img/main_dc2.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/main_dc2.jpg",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "index": 30,
+    "url": "https://nb-skin.com/img/menu_pc2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/menu_pc2.png",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "index": 31,
+    "url": "https://nb-skin.com/img/next2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/next2.png",
+    "status": "saved",
+    "size": 1676
+  },
+  {
+    "index": 32,
+    "url": "https://nb-skin.com/img/nextn.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/nextn.png",
+    "status": "saved",
+    "size": 1180
+  },
+  {
+    "index": 33,
+    "url": "https://nb-skin.com/img/over2.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/over2.jpg",
+    "status": "saved",
+    "size": 9268
+  },
+  {
+    "index": 34,
+    "url": "https://nb-skin.com/img/pay_icon1.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/pay_icon1.png",
+    "status": "saved",
+    "size": 1676
+  },
+  {
+    "index": 35,
+    "url": "https://nb-skin.com/img/pay_icon2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/pay_icon2.png",
+    "status": "saved",
+    "size": 1703
+  },
+  {
+    "index": 36,
+    "url": "https://nb-skin.com/img/pay_icon3.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/pay_icon3.png",
+    "status": "saved",
+    "size": 1174
+  },
+  {
+    "index": 37,
+    "url": "https://nb-skin.com/img/pay_icon4.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/pay_icon4.png",
+    "status": "saved",
+    "size": 1185
+  },
+  {
+    "index": 38,
+    "url": "https://nb-skin.com/img/payco.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/payco.png",
+    "status": "saved",
+    "size": 2326
+  },
+  {
+    "index": 39,
+    "url": "https://nb-skin.com/img/paynow.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/paynow.png",
+    "status": "saved",
+    "size": 2387
+  },
+  {
+    "index": 40,
+    "url": "https://nb-skin.com/img/pop/251230pop1.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/pop/251230pop1.jpg",
+    "status": "saved",
+    "size": 148400
+  },
+  {
+    "index": 41,
+    "url": "https://nb-skin.com/img/pop/260129pop1.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/pop/260129pop1.jpg",
+    "status": "saved",
+    "size": 159652
+  },
+  {
+    "index": 42,
+    "url": "https://nb-skin.com/img/pop/260129pop2.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/pop/260129pop2.jpg",
+    "status": "saved",
+    "size": 217645
+  },
+  {
+    "index": 43,
+    "url": "https://nb-skin.com/img/pop/260327pop.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/pop/260327pop.png",
+    "status": "saved",
+    "size": 647633
+  },
+  {
+    "index": 44,
+    "url": "https://nb-skin.com/img/prev2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/prev2.png",
+    "status": "saved",
+    "size": 1661
+  },
+  {
+    "index": 45,
+    "url": "https://nb-skin.com/img/prevn.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/prevn.png",
+    "status": "saved",
+    "size": 1184
+  },
+  {
+    "index": 46,
+    "url": "https://nb-skin.com/img/renewal/main/1.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/1.jpg",
+    "status": "saved",
+    "size": 1025049
+  },
+  {
+    "index": 47,
+    "url": "https://nb-skin.com/img/renewal/main/1_m.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/1_m.jpg",
+    "status": "saved",
+    "size": 741866
+  },
+  {
+    "index": 48,
+    "url": "https://nb-skin.com/img/renewal/main/2.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/2.jpg",
+    "status": "saved",
+    "size": 848300
+  },
+  {
+    "index": 49,
+    "url": "https://nb-skin.com/img/renewal/main/2_m.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/2_m.jpg",
+    "status": "saved",
+    "size": 572785
+  },
+  {
+    "index": 50,
+    "url": "https://nb-skin.com/img/renewal/main/3.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/3.jpg",
+    "status": "saved",
+    "size": 980884
+  },
+  {
+    "index": 51,
+    "url": "https://nb-skin.com/img/renewal/main/3_m.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/3_m.jpg",
+    "status": "saved",
+    "size": 441623
+  },
+  {
+    "index": 52,
+    "url": "https://nb-skin.com/img/renewal/main/footer_ban1.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/footer_ban1.png",
+    "status": "saved",
+    "size": 7467
+  },
+  {
+    "index": 53,
+    "url": "https://nb-skin.com/img/renewal/main/footer_ban2.png?1",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/footer_ban2__q_356a192b.png",
+    "status": "saved",
+    "size": 17191
+  },
+  {
+    "index": 54,
+    "url": "https://nb-skin.com/img/renewal/main/footer_ban3.png?1",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/footer_ban3__q_356a192b.png",
+    "status": "saved",
+    "size": 15457
+  },
+  {
+    "index": 55,
+    "url": "https://nb-skin.com/img/renewal/main/footer_bg.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/footer_bg.jpg",
+    "status": "saved",
+    "size": 787735
+  },
+  {
+    "index": 56,
+    "url": "https://nb-skin.com/img/renewal/main/footer_bg_m.jpg?1",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/footer_bg_m__q_356a192b.jpg",
+    "status": "saved",
+    "size": 349564
+  },
+  {
+    "index": 57,
+    "url": "https://nb-skin.com/img/renewal/main/main_slide_txt1.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/main_slide_txt1.png",
+    "status": "saved",
+    "size": 26318
+  },
+  {
+    "index": 58,
+    "url": "https://nb-skin.com/img/renewal/main/main_slide_txt2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/main_slide_txt2.png",
+    "status": "saved",
+    "size": 18861
+  },
+  {
+    "index": 59,
+    "url": "https://nb-skin.com/img/renewal/main/main_slide_txt3.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/main_slide_txt3.png",
+    "status": "saved",
+    "size": 11201
+  },
+  {
+    "index": 60,
+    "url": "https://nb-skin.com/img/renewal/main/section2_ban1.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_ban1.png",
+    "status": "saved",
+    "size": 125651
+  },
+  {
+    "index": 61,
+    "url": "https://nb-skin.com/img/renewal/main/section2_ban1_m.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_ban1_m.png",
+    "status": "saved",
+    "size": 278306
+  },
+  {
+    "index": 62,
+    "url": "https://nb-skin.com/img/renewal/main/section2_ban2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_ban2.png",
+    "status": "saved",
+    "size": 101836
+  },
+  {
+    "index": 63,
+    "url": "https://nb-skin.com/img/renewal/main/section2_ban2_m.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_ban2_m.png",
+    "status": "saved",
+    "size": 208580
+  },
+  {
+    "index": 64,
+    "url": "https://nb-skin.com/img/renewal/main/section2_ban3.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_ban3.png",
+    "status": "saved",
+    "size": 73334
+  },
+  {
+    "index": 65,
+    "url": "https://nb-skin.com/img/renewal/main/section2_ban3_m.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_ban3_m.png",
+    "status": "saved",
+    "size": 153709
+  },
+  {
+    "index": 66,
+    "url": "https://nb-skin.com/img/renewal/main/section2_ban4.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_ban4.png",
+    "status": "saved",
+    "size": 82330
+  },
+  {
+    "index": 67,
+    "url": "https://nb-skin.com/img/renewal/main/section2_ban4_m.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_ban4_m.png",
+    "status": "saved",
+    "size": 154004
+  },
+  {
+    "index": 68,
+    "url": "https://nb-skin.com/img/renewal/main/section2_title.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_title.png",
+    "status": "saved",
+    "size": 5066
+  },
+  {
+    "index": 69,
+    "url": "https://nb-skin.com/img/renewal/main/section2_title_m.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section2_title_m.png",
+    "status": "saved",
+    "size": 3284
+  },
+  {
+    "index": 70,
+    "url": "https://nb-skin.com/img/renewal/main/section3_ban1.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_ban1.png",
+    "status": "saved",
+    "size": 7798
+  },
+  {
+    "index": 71,
+    "url": "https://nb-skin.com/img/renewal/main/section3_ban2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_ban2.png",
+    "status": "saved",
+    "size": 6524
+  },
+  {
+    "index": 72,
+    "url": "https://nb-skin.com/img/renewal/main/section3_bg.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_bg.jpg",
+    "status": "saved",
+    "size": 148615
+  },
+  {
+    "index": 73,
+    "url": "https://nb-skin.com/img/renewal/main/section3_bg_m.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_bg_m.jpg",
+    "status": "saved",
+    "size": 46033
+  },
+  {
+    "index": 74,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll1.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll1.jpg",
+    "status": "saved",
+    "size": 39821
+  },
+  {
+    "index": 75,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll10.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll10.jpg",
+    "status": "saved",
+    "size": 37322
+  },
+  {
+    "index": 76,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll11.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll11.jpg",
+    "status": "saved",
+    "size": 35921
+  },
+  {
+    "index": 77,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll12.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll12.jpg",
+    "status": "saved",
+    "size": 37773
+  },
+  {
+    "index": 78,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll13.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll13.jpg",
+    "status": "saved",
+    "size": 37326
+  },
+  {
+    "index": 79,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll14.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll14.jpg",
+    "status": "saved",
+    "size": 35605
+  },
+  {
+    "index": 80,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll15.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll15.jpg",
+    "status": "saved",
+    "size": 32489
+  },
+  {
+    "index": 81,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll16.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll16.jpg",
+    "status": "saved",
+    "size": 51970
+  },
+  {
+    "index": 82,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll17.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll17.jpg",
+    "status": "saved",
+    "size": 47381
+  },
+  {
+    "index": 83,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll2.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll2.jpg",
+    "status": "saved",
+    "size": 41312
+  },
+  {
+    "index": 84,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll3.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll3.jpg",
+    "status": "saved",
+    "size": 42177
+  },
+  {
+    "index": 85,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll4.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll4.jpg",
+    "status": "saved",
+    "size": 32655
+  },
+  {
+    "index": 86,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll5.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll5.jpg",
+    "status": "saved",
+    "size": 35613
+  },
+  {
+    "index": 87,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll6.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll6.jpg",
+    "status": "saved",
+    "size": 46319
+  },
+  {
+    "index": 88,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll7.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll7.jpg",
+    "status": "saved",
+    "size": 38257
+  },
+  {
+    "index": 89,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll8.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll8.jpg",
+    "status": "saved",
+    "size": 43663
+  },
+  {
+    "index": 90,
+    "url": "https://nb-skin.com/img/renewal/main/section3_roll9.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_roll9.jpg",
+    "status": "saved",
+    "size": 40934
+  },
+  {
+    "index": 91,
+    "url": "https://nb-skin.com/img/renewal/main/section3_title_m.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/renewal/main/section3_title_m.png",
+    "status": "saved",
+    "size": 14680
+  },
+  {
+    "index": 92,
+    "url": "https://nb-skin.com/img/samsungpay.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/samsungpay.png",
+    "status": "saved",
+    "size": 2071
+  },
+  {
+    "index": 93,
+    "url": "https://nb-skin.com/img/sns2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/sns2.png",
+    "status": "saved",
+    "size": 2346
+  },
+  {
+    "index": 94,
+    "url": "https://nb-skin.com/img/sns3.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/sns3.png",
+    "status": "saved",
+    "size": 2252
+  },
+  {
+    "index": 95,
+    "url": "https://nb-skin.com/img/sns4.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/sns4.png",
+    "status": "saved",
+    "size": 2349
+  },
+  {
+    "index": 96,
+    "url": "https://nb-skin.com/img/we.jpg",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/we.jpg",
+    "status": "saved",
+    "size": 54821
+  },
+  {
+    "index": 97,
+    "url": "https://nb-skin.com/img/we2_new.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/we2_new.png",
+    "status": "saved",
+    "size": 106935
+  },
+  {
+    "index": 98,
+    "url": "https://nb-skin.com/img/x_btn.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/x_btn.png",
+    "status": "saved",
+    "size": 1914
+  },
+  {
+    "index": 99,
+    "url": "https://nb-skin.com/img/x_btn2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/x_btn2.png",
+    "status": "saved",
+    "size": 1891
+  },
+  {
+    "index": 100,
+    "url": "https://nb-skin.com/img/x_btn22.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/x_btn22.png",
+    "status": "saved",
+    "size": 2078
+  },
+  {
+    "index": 101,
+    "url": "https://nb-skin.com/img/x_btn3.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/x_btn3.png",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "index": 102,
+    "url": "https://nb-skin.com/img/x_btnp2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/img/x_btnp2.png",
+    "status": "saved",
+    "size": 1975
+  },
+  {
+    "index": 103,
+    "url": "https://nb-skin.com/js/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/js/font-awesome/fonts/fontawesome-webfont__q_dc195941.svg",
+    "status": "saved",
+    "size": 444379
+  },
+  {
+    "index": 104,
+    "url": "https://nb-skin.com/js/slick/ajax-loader.gif",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/js/slick/ajax-loader.gif",
+    "status": "saved",
+    "size": 4178
+  },
+  {
+    "index": 105,
+    "url": "https://nb-skin.com/mobile/skin/social/img/chk.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/chk.png",
+    "status": "saved",
+    "size": 1070
+  },
+  {
+    "index": 106,
+    "url": "https://nb-skin.com/mobile/skin/social/img/plus_minus.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/plus_minus.png",
+    "status": "saved",
+    "size": 2863
+  },
+  {
+    "index": 107,
+    "url": "https://nb-skin.com/mobile/skin/social/img/sns_fb_s.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/sns_fb_s.png",
+    "status": "saved",
+    "size": 1580
+  },
+  {
+    "index": 108,
+    "url": "https://nb-skin.com/mobile/skin/social/img/sns_gp_s.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/sns_gp_s.png",
+    "status": "saved",
+    "size": 820
+  },
+  {
+    "index": 109,
+    "url": "https://nb-skin.com/mobile/skin/social/img/sns_kakao_s.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/sns_kakao_s.png",
+    "status": "saved",
+    "size": 2104
+  },
+  {
+    "index": 110,
+    "url": "https://nb-skin.com/mobile/skin/social/img/sns_logo.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/sns_logo.png",
+    "status": "saved",
+    "size": 6045
+  },
+  {
+    "index": 111,
+    "url": "https://nb-skin.com/mobile/skin/social/img/sns_logo_not.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/sns_logo_not.png",
+    "status": "saved",
+    "size": 5465
+  },
+  {
+    "index": 112,
+    "url": "https://nb-skin.com/mobile/skin/social/img/sns_naver_s.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/sns_naver_s.png",
+    "status": "saved",
+    "size": 1571
+  },
+  {
+    "index": 113,
+    "url": "https://nb-skin.com/mobile/skin/social/img/sns_payco_s.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/sns_payco_s.png",
+    "status": "saved",
+    "size": 1336
+  },
+  {
+    "index": 114,
+    "url": "https://nb-skin.com/mobile/skin/social/img/sns_twitter_s.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/mobile/skin/social/img/sns_twitter_s.png",
+    "status": "saved",
+    "size": 1736
+  },
+  {
+    "index": 115,
+    "url": "https://nb-skin.com/shop/img/cart.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/shop/img/cart.png",
+    "status": "saved",
+    "size": 3818
+  },
+  {
+    "index": 116,
+    "url": "https://nb-skin.com/theme/jelly/img/btn_end.gif",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/theme/jelly/img/btn_end.gif",
+    "status": "saved",
+    "size": 1176
+  },
+  {
+    "index": 117,
+    "url": "https://nb-skin.com/theme/jelly/img/btn_first.gif",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/theme/jelly/img/btn_first.gif",
+    "status": "saved",
+    "size": 1885
+  },
+  {
+    "index": 118,
+    "url": "https://nb-skin.com/theme/jelly/img/btn_next.gif",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/theme/jelly/img/btn_next.gif",
+    "status": "saved",
+    "size": 1169
+  },
+  {
+    "index": 119,
+    "url": "https://nb-skin.com/theme/jelly/img/btn_prev.gif",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/theme/jelly/img/btn_prev.gif",
+    "status": "saved",
+    "size": 1873
+  },
+  {
+    "index": 120,
+    "url": "https://nb-skin.com/theme/jelly/img/bullet.gif",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/theme/jelly/img/bullet.gif",
+    "status": "saved",
+    "size": 1165
+  },
+  {
+    "index": 121,
+    "url": "https://nb-skin.com/theme/jelly/img/mobile/btn_menu.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/theme/jelly/img/mobile/btn_menu.png",
+    "status": "saved",
+    "size": 960
+  },
+  {
+    "index": 122,
+    "url": "https://nb-skin.com/theme/jelly/img/mobile/gnb_bg.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/theme/jelly/img/mobile/gnb_bg.png",
+    "status": "saved",
+    "size": 1012
+  },
+  {
+    "index": 123,
+    "url": "https://nb-skin.com/theme/jelly/img/mobile/gnb_bg2.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/theme/jelly/img/mobile/gnb_bg2.png",
+    "status": "saved",
+    "size": 976
+  },
+  {
+    "index": 124,
+    "url": "https://nb-skin.com/theme/jelly/img/require.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/nb-skin.com/theme/jelly/img/require.png",
+    "status": "saved",
+    "size": 2922
+  },
+  {
+    "index": 125,
+    "url": "https://t1.daumcdn.net/mapjsapi/images/2x/transparent.gif",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/t1.daumcdn.net/mapjsapi/images/2x/transparent.gif",
+    "status": "saved",
+    "size": 43
+  },
+  {
+    "index": 126,
+    "url": "https://t1.daumcdn.net/mapjsapi/images/transparent.gif",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/t1.daumcdn.net/mapjsapi/images/transparent.gif",
+    "status": "saved",
+    "size": 43
+  },
+  {
+    "index": 127,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i11!2i1746!3i793!4i256!2m1!1e1!3m12!2sko!3sKR!5e289!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i47083502&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=107993",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_ea66c017.bin",
+    "status": "saved",
+    "size": 21166
+  },
+  {
+    "index": 128,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27945!3i12695!4i256!2m3!1e0!2sm!3i775538988!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=107459",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_3d852104.bin",
+    "status": "saved",
+    "size": 23498
+  },
+  {
+    "index": 129,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27945!3i12696!4i256!2m3!1e0!2sm!3i775538928!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=85703",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_32e09703.bin",
+    "status": "saved",
+    "size": 19618
+  },
+  {
+    "index": 130,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27945!3i12697!4i256!2m3!1e0!2sm!3i775538928!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=22783",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_6742f93a.bin",
+    "status": "saved",
+    "size": 18060
+  },
+  {
+    "index": 131,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27945!3i12698!4i256!2m3!1e0!2sm!3i775538928!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=90934",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_fbe3c01c.bin",
+    "status": "saved",
+    "size": 22266
+  },
+  {
+    "index": 132,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27946!3i12695!4i256!2m3!1e0!2sm!3i775538988!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=24448",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_a6bdc4eb.bin",
+    "status": "saved",
+    "size": 22424
+  },
+  {
+    "index": 133,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27946!3i12696!4i256!2m3!1e0!2sm!3i775538928!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=2692",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_9ea9f068.bin",
+    "status": "saved",
+    "size": 26380
+  },
+  {
+    "index": 134,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27946!3i12697!4i256!2m3!1e0!2sm!3i775538928!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=70843",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_42f768af.bin",
+    "status": "saved",
+    "size": 22526
+  },
+  {
+    "index": 135,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27946!3i12698!4i256!2m3!1e0!2sm!3i775538928!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=7923",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_3270f9c3.bin",
+    "status": "saved",
+    "size": 20308
+  },
+  {
+    "index": 136,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27947!3i12695!4i256!2m3!1e0!2sm!3i775538988!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=72508",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_58ff174b.bin",
+    "status": "saved",
+    "size": 22970
+  },
+  {
+    "index": 137,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27947!3i12696!4i256!2m3!1e0!2sm!3i775538928!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=50752",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_a7f0fbc4.bin",
+    "status": "saved",
+    "size": 21492
+  },
+  {
+    "index": 138,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27947!3i12697!4i256!2m3!1e0!2sm!3i775538928!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=118903",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_40238224.bin",
+    "status": "saved",
+    "size": 21968
+  },
+  {
+    "index": 139,
+    "url": "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i27947!3i12698!4i256!2m3!1e0!2sm!3i775538928!2m3!1e2!2sspotlit!5i1!3m13!2sko!3sKR!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y3854132800230928219!2y16944551101292212273!2s%2Fg%2F11js57sf5f!4m2!1x375011429!2x1270263160!15sgcid%3Adermatologist!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=55983",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.google.com/maps/vt__q_66e5dcbb.bin",
+    "status": "saved",
+    "size": 18644
+  },
+  {
+    "index": 140,
+    "url": "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png",
+    "status": "saved",
+    "size": 910
+  },
+  {
+    "index": 141,
+    "url": "https://www.gstatic.com/images/branding/product/2x/translate_24dp.png",
+    "localPath": "/Users/shwanbook/antigravity/arsea-jayeon-text-only/assets/nb-skin-homepage-all/www.gstatic.com/images/branding/product/2x/translate_24dp.png",
+    "status": "saved",
+    "size": 1842
+  }
+]
