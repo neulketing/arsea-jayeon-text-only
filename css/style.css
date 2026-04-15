@@ -474,7 +474,7 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
 .diff-mag-label {
   font-size: 12px;
   font-weight: 600;
-  color: rgba(0,163,255,0.9);
+  color: rgba(255,255,255,0.7);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
@@ -489,7 +489,7 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 .diff-mag-title span {
-  color: #5eb8ff;
+  color: #fff;
 }
 .diff-mag-name {
   font-size: 13px;
@@ -557,8 +557,8 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   border: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(8px);
 }
-.diff-card-light .diff-card-title { color: #fff; }
-.diff-card-light .diff-num { color: rgba(255,255,255,0.7); }
+.diff-card-light .diff-card-title { color: #fff !important; }
+.diff-card-light .diff-num { color: rgba(255,255,255,0.7) !important; }
 .diff-card-light .diff-tags span {
   background: rgba(0,99,255,0.15);
   color: rgba(255,255,255,0.8);
