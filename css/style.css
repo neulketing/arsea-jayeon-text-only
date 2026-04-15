@@ -581,7 +581,8 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   border: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(8px);
 }
-.diff-card-light .diff-card-title { color: #eee; }
+.diff-card-light .diff-card-title { color: #fff; }
+.diff-card-light .diff-num { color: rgba(255,255,255,0.7); }
 .diff-card-light .diff-tags span {
   background: rgba(0,99,255,0.15);
   color: rgba(255,255,255,0.8);
@@ -602,7 +603,6 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   display: block;
   margin-bottom: 8px;
 }
-.diff-card-light .diff-num { color: rgba(0,99,255,0.8); }
 
 .diff-card-title {
   font-size: 18px;
