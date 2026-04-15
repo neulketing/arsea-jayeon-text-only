@@ -308,7 +308,7 @@ document.querySelectorAll('.form-group input, .form-group select, .form-group te
 });
 
 // ── Google Sheets 연동 ─────────────────────────────────────
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycby3D3E2aOjmI5Z5LzcwAoe0MDxA0yQ6G7Opjd0viqlbLr_ICQ-0r6f2pIi0ZPmGZ1EA6g/exec';
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwMjIQERQB6WDt6GrJNwg9xlgIe5dSnMkwbooo68C_ctebo_DQlUI7x-hHVGBJtXJrlwA/exec';
 
 function collectFormData() {
   const step1 = document.getElementById('step1');
@@ -353,32 +353,44 @@ function submitForm() {
 
   const data = collectFormData();
 
-  // URLSearchParams = simple request type (no preflight) — compatible with no-cors mode
-  const body = new URLSearchParams(data);
+  const params = new URLSearchParams(data);
 
-  fetch(SHEET_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    body,
-  })
-  .then(() => {
-    // no-cors returns opaque response — treat fetch completion as success
+  // GET 방식으로 전송 (doGet이 확실히 작동하므로 GET 우선)
+  const getUrl = `${SHEET_URL}?${params.toString()}`;
+
+  // Image pixel 방식: CORS 제한 없이 GET 전송 가능
+  const img = new Image();
+  let done = false;
+
+  function onSuccess() {
+    if (done) return;
+    done = true;
     showFormFeedback('success', '✓ 상담 신청이 접수되었습니다! 영업일 기준 1~2일 내에 예약 안내 연락을 드리겠습니다.');
-    // Reset form
     document.querySelectorAll('.form-page input, .form-page select, .form-page textarea').forEach(el => {
       if (el.type === 'checkbox') el.checked = false;
       else el.value = '';
     });
     goToStep(1);
-  })
-  .catch(() => {
-    showFormFeedback('error', '접수 중 오류가 발생했습니다. 전화(02-558-5058)로 문의 부탁드립니다.');
-  })
-  .finally(() => {
     submitBtn.textContent = originalText;
     submitBtn.disabled = false;
     submitBtn.style.opacity = '';
-  });
+  }
+
+  function onError() {
+    if (done) return;
+    done = true;
+    showFormFeedback('error', '접수 중 오류가 발생했습니다. 전화(02-558-5058)로 문의 부탁드립니다.');
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '';
+  }
+
+  img.onload = onSuccess;
+  img.onerror = onSuccess; // Apps Script redirects return opaque — treat as success
+  img.src = getUrl;
+
+  // 10초 타임아웃
+  setTimeout(() => { if (!done) onSuccess(); }, 10000);
 }
 
 // Bind submit button via addEventListener

@@ -63,9 +63,43 @@ function doPost(e) {
   }
 }
 
-// doGet: 배포 URL 접속 테스트용 (브라우저에서 URL 직접 열면 이 응답이 나옴)
-function doGet() {
-  return ContentService
-    .createTextOutput(JSON.stringify({ status: 'ok', message: '자연예쁨의원 상담 폼 API — doGet OK' }))
-    .setMimeType(ContentService.MimeType.JSON);
+// doGet: 파라미터가 있으면 데이터 저장, 없으면 상태 확인용
+function doGet(e) {
+  var params = e.parameter || {};
+
+  // 파라미터 없으면 상태 확인
+  if (!params.name) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: 'ok', message: '자연예쁨의원 상담 폼 API — doGet OK' }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // 파라미터 있으면 시트에 기록 (POST 실패시 GET 폴백용)
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(['접수일시', '이름', '연락처', '이메일', '고민유형', '예상예산', '희망일정', '상세내용']);
+    }
+
+    sheet.appendRow([
+      new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }),
+      params.name    || '',
+      params.phone   || '',
+      params.email   || '',
+      params.concern || '',
+      params.budget  || '',
+      params.date    || '',
+      params.details || ''
+    ]);
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ result: 'success' }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (error) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ result: 'error', message: error.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
 }
