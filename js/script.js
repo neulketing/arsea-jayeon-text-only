@@ -285,13 +285,73 @@ document.querySelectorAll('.form-group input, .form-group select, .form-group te
   });
 });
 
+// ── Google Sheets 연동 ─────────────────────────────────────
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycby3D3E2aOjmI5Z5LzcwAoe0MDxA0yQ6G7Opjd0viqlbLr_ICQ-0r6f2pIi0ZPmGZ1EA6g/exec';
+
+function collectFormData() {
+  const step1 = document.getElementById('step1');
+  const step2 = document.getElementById('step2');
+
+  const nameVal = step1.querySelector('input[type="text"]')?.value.trim() || '';
+  const emailVal = step1.querySelector('input[type="email"]')?.value.trim() || '';
+
+  const phoneInputs = step1.querySelectorAll('.phone-group input');
+  const phoneVal = Array.from(phoneInputs).map(i => i.value.trim()).filter(Boolean).join('-');
+
+  const concernVal = step2.querySelector('select')?.value || '';
+  const budgetVal = step2.querySelector('input[type="text"]')?.value.trim() || '';
+  const dateVal = step2.querySelector('input[type="date"]')?.value || '';
+  const detailsVal = step2.querySelector('textarea')?.value.trim() || '';
+
+  return {
+    name: nameVal,
+    phone: phoneVal,
+    email: emailVal,
+    concern: concernVal,
+    budget: budgetVal,
+    date: dateVal,
+    details: detailsVal
+  };
+}
+
 function submitForm() {
   const agreeCheckbox = document.getElementById('agreePrivacy');
   if (!agreeCheckbox.checked) {
-    alert('\uac1c\uc778\uc815\ubcf4 \uc218\uc9d1 \ubc0f \uc0c1\ub2f4 \uc548\ub0b4\uc5d0 \ub3d9\uc758\ud574\uc8fc\uc138\uc694.');
+    alert('개인정보 수집 및 상담 안내에 동의해주세요.');
     return;
   }
-  alert('\uc0c1\ub2f4 \uc2e0\uccad\uc774 \uc811\uc218\ub418\uc5c8\uc2b5\ub2c8\ub2e4!\n\uc601\uc5c5\uc77c \uae30\uc900 1~2\uc77c \ub0b4\uc5d0 \uc608\uc57d \uc548\ub0b4 \uc5f0\ub77d\uc744 \ub4dc\ub9ac\uaca0\uc2b5\ub2c8\ub2e4.');
+
+  const submitBtn = document.querySelector('.btn-submit');
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = '접수 중...';
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.7';
+
+  const data = collectFormData();
+
+  fetch(SHEET_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert('상담 신청이 접수되었습니다!\n영업일 기준 1~2일 내에 예약 안내 연락을 드리겠습니다.');
+    // 폼 초기화
+    document.querySelectorAll('.form-page input, .form-page select, .form-page textarea').forEach(el => {
+      if (el.type === 'checkbox') el.checked = false;
+      else el.value = '';
+    });
+    goToStep(1);
+  })
+  .catch(() => {
+    alert('접수 중 오류가 발생했습니다. 전화(02-558-5058)로 문의 부탁드립니다.');
+  })
+  .finally(() => {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '';
+  });
 }
 
 // ── Portfolio Horizontal Drag Scroll ──────────────────────
