@@ -1011,7 +1011,30 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   position: relative;
 }
 
-/* Glow ring on hover/visible */
+/* Toss-style 3D icon */
+.step-icon-3d {
+  background: linear-gradient(145deg, #222, #1a1a1a);
+  border: 1.5px solid rgba(255,255,255,0.06);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.toss-emoji {
+  font-size: 38px;
+  line-height: 1;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+  animation: tossFloat 4s ease-in-out infinite;
+}
+
+/* Staggered floating per step */
+.process-step:nth-child(2) .toss-emoji { animation-delay: -0.8s; }
+.process-step:nth-child(3) .toss-emoji { animation-delay: -1.6s; }
+.process-step:nth-child(4) .toss-emoji { animation-delay: -2.4s; }
+.process-step:nth-child(5) .toss-emoji { animation-delay: -3.2s; }
+.process-step:nth-child(6) .toss-emoji { animation-delay: -4.0s; }
+
+/* Glow ring on hover */
 .step-icon::after {
   content: '';
   position: absolute;
@@ -1022,13 +1045,16 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
 }
 
 .process-step:hover .step-icon {
-  border-color: #0063ff;
-  box-shadow: 0 0 30px rgba(0,99,255,0.25);
-  transform: translateY(-4px);
+  border-color: rgba(0,99,255,0.5);
+  box-shadow: 0 0 30px rgba(0,99,255,0.2), 0 12px 32px rgba(0,0,0,0.4);
+  transform: translateY(-6px);
 }
 .process-step:hover .step-icon::after {
-  border-color: rgba(0,99,255,0.3);
-  box-shadow: 0 0 20px rgba(0,99,255,0.15);
+  border-color: rgba(0,99,255,0.25);
+  box-shadow: 0 0 20px rgba(0,99,255,0.12);
+}
+.process-step:hover .toss-emoji {
+  transform: scale(1.15) rotate(-5deg);
 }
 
 .step-icon img { width: 44px; height: 44px; object-fit: contain; }
@@ -1941,6 +1967,12 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
 @keyframes ringFloat {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes tossFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(2deg); }
+  75% { transform: translateY(3px) rotate(-2deg); }
 }
 
 @keyframes emblemPulse {
