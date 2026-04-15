@@ -422,36 +422,51 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   box-shadow: 0 14px 28px rgba(0,99,255,0.25);
   z-index: 2;
 }
-.tag-white { background: #fff; color: #212121; }
-.tag-blue  { background: #0063ff; color: #fff; }
+.tag-outline {
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+.tag-blue-sm {
+  background: rgba(0,99,255,0.2);
+  color: #5aa0ff;
+  border: 1px solid rgba(0,99,255,0.3);
+}
 
-.tag:nth-child(1) { top: 0; left: 60px; }
-.tag:nth-child(2) { top: 40px; left: 0; }
-.tag:nth-child(3) { top: 80px; left: 60px; --tag-rotate: -5deg; }
-.tag:nth-child(4) { top: 10px; left: 200px; }
-.tag:nth-child(5) { top: 120px; left: 220px; }
-.tag:nth-child(6) { top: 140px; left: 20px; }
+.float-tags {
+  position: relative;
+  height: auto;
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  --tag-rotate: 0deg;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+  white-space: nowrap;
+  font-family: 'KoPub Dotum', sans-serif;
+  box-shadow: none;
+  transform: none;
+  animation: tagFadeFloat 5s ease-in-out infinite;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.tag:hover {
+  background: rgba(0,99,255,0.1);
+  border-color: rgba(0,99,255,0.4);
+}
+
 .tag:nth-child(1) { animation-delay: 0s; }
-.tag:nth-child(2) { animation-delay: -1s; }
-.tag:nth-child(3) { animation-delay: -2.2s; }
-.tag:nth-child(4) { animation-delay: -1.4s; }
-.tag:nth-child(5) { animation-delay: -3s; }
-.tag:nth-child(6) { animation-delay: -2s; }
-
-.float-icon {
-  position: absolute;
-  top: 60px; left: 380px;
-  width: 48px; height: 48px;
-  object-fit: contain;
-  animation: iconFloat 5.5s ease-in-out infinite;
-}
-.float-icon2 {
-  position: absolute;
-  top: 0; left: 460px;
-  width: 40px; height: 40px;
-  object-fit: contain;
-  animation: iconFloat 6.2s ease-in-out infinite reverse;
-}
+.tag:nth-child(2) { animation-delay: -1.2s; }
+.tag:nth-child(3) { animation-delay: -2.5s; }
+.tag:nth-child(4) { animation-delay: -3.8s; }
 
 .diff-label {
   color: #0063ff;
@@ -470,34 +485,70 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   margin-bottom: 20px;
 }
 
+.diff-title-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+
+.diff-avatar {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.diff-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid rgba(0,99,255,0.5);
+  box-shadow: 0 0 0 6px rgba(0,99,255,0.1), 0 12px 30px rgba(0,0,0,0.3);
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease;
+}
+.diff-avatar:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 6px rgba(0,99,255,0.2), 0 16px 36px rgba(0,99,255,0.25);
+}
+.diff-avatar-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.diff-title-row .diff-label { margin-bottom: 10px; }
+.diff-title-row .diff-title { margin-bottom: 0; }
+
 .diff-desc {
   font-size: 15px;
   color: #888;
   line-height: 1.8;
+  margin-bottom: 28px;
 }
 
-.diff-director-photo {
-  margin-top: 36px;
-  width: 280px;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-  transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease;
+.diff-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border: 1.5px solid rgba(0,99,255,0.5);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
-.diff-director-photo img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
-}
-.diff-director-photo:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 60px rgba(0,99,255,0.2);
-}
-.diff-director-photo:hover img {
-  transform: scale(1.04);
+.diff-cta:hover {
+  background: rgba(0,99,255,0.15);
+  border-color: #0063ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,99,255,0.2);
 }
 
 .diff-right {
@@ -530,8 +581,20 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   box-shadow: 0 20px 44px rgba(15, 23, 42, 0.24);
 }
 
-.diff-card-blue { background: #0063ff; }
-.diff-card-light { background: #e8f0ff; }
+.diff-card-blue {
+  background: linear-gradient(135deg, #0063ff, #0050d0);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.diff-card-light {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+}
+.diff-card-light .diff-card-title { color: #eee; }
+.diff-card-light .diff-tags span {
+  background: rgba(0,99,255,0.15);
+  color: rgba(255,255,255,0.8);
+}
 
 .diff-card-header {
   display: flex;
@@ -548,7 +611,7 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   display: block;
   margin-bottom: 8px;
 }
-.diff-card-light .diff-num { color: #0063ff; }
+.diff-card-light .diff-num { color: rgba(0,99,255,0.8); }
 
 .diff-card-title {
   font-size: 18px;
@@ -1795,7 +1858,9 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   .swiper-button-prev, .swiper-button-next { width: 42px; height: 42px; }
 
   .diff-inner { grid-template-columns: 1fr; gap: 40px; }
-  .float-tags { height: 160px; }
+  .diff-title-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .diff-avatar { flex-direction: row; gap: 12px; }
+  .diff-avatar img { width: 64px; height: 64px; }
 
   .portfolio-scroll-wrap { padding: 0 20px 20px; }
   .portfolio-header { padding: 0 20px; }
@@ -1854,6 +1919,11 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
 @keyframes tagFloat {
   0%, 100% { transform: translateY(0) rotate(var(--tag-rotate)); }
   50% { transform: translateY(-8px) rotate(var(--tag-rotate)); }
+}
+
+@keyframes tagFadeFloat {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-4px); opacity: 0.8; }
 }
 
 @keyframes iconFloat {
