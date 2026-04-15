@@ -50,6 +50,9 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
 .blue { color: #0063ff; }
 .blue-link { color: #0063ff; text-decoration: underline; }
 
+/* Utility: hide sections via class instead of inline style */
+.section-hidden { display: none; }
+
 /* ── HEADER ─────────────────────────────────────────────── */
 #header {
   position: fixed;
@@ -396,33 +399,6 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
 }
 
 .diff-left { position: relative; }
-
-.float-tags {
-  position: relative;
-  height: 200px;
-  margin-bottom: 40px;
-}
-
-.tag {
-  --tag-rotate: 0deg;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 600;
-  position: absolute;
-  white-space: nowrap;
-  font-family: 'KoPub Dotum', sans-serif;
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.12);
-  transform: rotate(var(--tag-rotate));
-  animation: tagFloat 6s ease-in-out infinite;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.tag:hover {
-  box-shadow: 0 14px 28px rgba(0,99,255,0.25);
-  z-index: 2;
-}
-/* Float tags removed — replaced by diff-magazine layout */
 
 .diff-label {
   color: #0063ff;
@@ -1433,6 +1409,10 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   transform-origin: left;
   transition: transform 0.5s ease;
 }
+/* JS adds .filled class to trigger the CSS animation */
+.step-divider.filled::after {
+  transform: scaleX(1);
+}
 
 .form-page { display: none; }
 .form-page.active {
@@ -1449,6 +1429,34 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   margin-bottom: 8px;
 }
 .req { color: #ff4444; }
+
+/* Field-level error message */
+.field-error {
+  display: none;
+  font-size: 12px;
+  color: #ff4444;
+  margin-top: 5px;
+}
+
+/* Form submission feedback (inline, replaces alert) */
+.form-feedback {
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.form-feedback--success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+.form-feedback--error {
+  background: #ffeaea;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
 
 .form-group input,
 .form-group select,

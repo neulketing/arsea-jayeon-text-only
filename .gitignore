@@ -1,1 +1,6 @@
 .vercel
+
+# 실제 사이트에서 사용하지 않는 레퍼런스 이미지 (용량 절감)
+assets/nb-skin/
+assets/nb-skin-complete/
+assets/nb-skin-homepage-all/
