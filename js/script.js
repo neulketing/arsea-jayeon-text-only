@@ -36,6 +36,68 @@ const heroSwiper = new Swiper('.hero-swiper', {
   }
 });
 
+// ── Magazine Card Swiper (differentiator section) ──────────
+const magProgressBar = document.querySelector('.mag-swiper-progress span');
+const MAG_DELAY = 5000;
+
+const magSwiper = new Swiper('.mag-swiper', {
+  loop: true,
+  autoplay: { delay: MAG_DELAY, disableOnInteraction: false },
+  speed: 900,
+  effect: 'fade',
+  fadeEffect: { crossFade: true },
+  pagination: {
+    el: '.mag-swiper-pagination',
+    clickable: true,
+  },
+  on: {
+    slideChangeTransitionStart() {
+      if (magProgressBar) {
+        magProgressBar.style.transition = 'none';
+        magProgressBar.style.width = '0%';
+      }
+    },
+    slideChangeTransitionEnd() {
+      if (magProgressBar) {
+        requestAnimationFrame(() => {
+          magProgressBar.style.transition = `width ${MAG_DELAY}ms linear`;
+          magProgressBar.style.width = '100%';
+        });
+      }
+    },
+    init() {
+      if (magProgressBar) {
+        requestAnimationFrame(() => {
+          magProgressBar.style.transition = `width ${MAG_DELAY}ms linear`;
+          magProgressBar.style.width = '100%';
+        });
+      }
+    }
+  }
+});
+
+// Pause progress + autoplay on hover
+const magSwiperEl = document.querySelector('.mag-swiper');
+if (magSwiperEl && magSwiper) {
+  magSwiperEl.addEventListener('mouseenter', () => {
+    magSwiper.autoplay?.stop();
+    if (magProgressBar) {
+      const computed = getComputedStyle(magProgressBar).width;
+      magProgressBar.style.transition = 'none';
+      magProgressBar.style.width = computed;
+    }
+  });
+  magSwiperEl.addEventListener('mouseleave', () => {
+    magSwiper.autoplay?.start();
+    if (magProgressBar) {
+      requestAnimationFrame(() => {
+        magProgressBar.style.transition = `width ${MAG_DELAY}ms linear`;
+        magProgressBar.style.width = '100%';
+      });
+    }
+  });
+}
+
 // ── Review Image Swiper ────────────────────────────────────
 const reviewSwiper = new Swiper('.review-img-swiper', {
   loop: true,
