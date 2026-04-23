@@ -1054,10 +1054,177 @@ input, textarea, select { font-family: inherit; outline: none; border: none; }
   font-size: 12px;
 }
 
-/* ── SECTION 6: DIRECTOR ────────────────────────────────── */
+/* ── SECTION 6: DIRECTOR PROFILE ───────────────────────── */
 #director {
-  background: #f6f4f1;
-  padding: 100px 0;
+  background: #0a0a0a;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.director-inner { display: none; }
+
+.director-v2-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 40px 0;
+}
+
+/* Brand logo */
+.director-v2-brand {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.director-v2-logomark {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.director-v2-brand-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.director-v2-brand-sub {
+  font-size: 9px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 3.5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Tagline */
+.director-v2-tagline {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.55;
+  text-align: center;
+  letter-spacing: -0.3px;
+  margin-bottom: 80px;
+}
+
+/* Profile layout */
+.director-v2-profile {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.director-v2-photo {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+}
+.director-v2-photo img {
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.director-v2-photo:hover img {
+  transform: scale(1.04);
+}
+
+.director-v2-info { padding-top: 0; }
+
+.director-v2-name {
+  font-size: clamp(30px, 3.2vw, 42px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 14px;
+  letter-spacing: -0.8px;
+}
+.director-v2-name span {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  margin-left: 6px;
+  letter-spacing: 0;
+}
+
+.director-v2-en-badge {
+  display: inline-block;
+  background: #0b2d5c;
+  color: #fff;
+  padding: 7px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  font-family: 'Poppins', serif;
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+
+.director-v2-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+.director-v2-desc:last-child { margin-bottom: 0; }
+
+/* Credentials bottom band */
+.director-v2-credentials {
+  background: #141414;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 60px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.director-v2-credentials ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.director-v2-credentials li {
+  font-size: 14px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+  padding-left: 12px;
+  position: relative;
+}
+.director-v2-credentials li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: rgba(255,255,255,0.5);
+}
+.director-v2-credentials li span {
+  color: rgba(200,155,92,0.95);
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+/* Dark background wrapper for credentials */
+#director > .director-v2-credentials-wrap {
+  background: #141414;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .director-v2-inner { padding: 60px 20px 0; }
+  .director-v2-tagline { margin-bottom: 50px; }
+  .director-v2-profile {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  .director-v2-photo { max-width: 260px; margin: 0 auto; }
+  .director-v2-info { text-align: center; }
+  .director-v2-credentials {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+  }
 }
 
 .director-inner {
