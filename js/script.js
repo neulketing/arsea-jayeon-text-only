@@ -36,67 +36,77 @@ const heroSwiper = new Swiper('.hero-swiper', {
   }
 });
 
-// ── Magazine Card Swiper (differentiator section) ──────────
-const magProgressBar = document.querySelector('.mag-swiper-progress span');
-const MAG_DELAY = 5000;
+// ── Magazine Card Auto-Rotator (differentiator section) ────
+(() => {
+  const card = document.querySelector('.mag-card');
+  if (!card) return;
 
-const magSwiper = new Swiper('.mag-swiper', {
-  loop: true,
-  autoplay: { delay: MAG_DELAY, disableOnInteraction: false },
-  speed: 900,
-  effect: 'fade',
-  fadeEffect: { crossFade: true },
-  pagination: {
-    el: '.mag-swiper-pagination',
-    clickable: true,
-  },
-  on: {
-    slideChangeTransitionStart() {
-      if (magProgressBar) {
-        magProgressBar.style.transition = 'none';
-        magProgressBar.style.width = '0%';
-      }
-    },
-    slideChangeTransitionEnd() {
-      if (magProgressBar) {
-        requestAnimationFrame(() => {
-          magProgressBar.style.transition = `width ${MAG_DELAY}ms linear`;
-          magProgressBar.style.width = '100%';
-        });
-      }
-    },
-    init() {
-      if (magProgressBar) {
-        requestAnimationFrame(() => {
-          magProgressBar.style.transition = `width ${MAG_DELAY}ms linear`;
-          magProgressBar.style.width = '100%';
-        });
-      }
-    }
+  const imgs  = card.querySelectorAll('[data-mag-img]');
+  const texts = card.querySelectorAll('[data-mag-text]');
+  const dots  = card.querySelectorAll('[data-mag-dot]');
+  const loc   = card.querySelector('[data-mag-loc]');
+  const bar   = card.querySelector('.mag-progress span');
+  const total = imgs.length;
+  if (!total) return;
+
+  const LOC_LABELS = ['강남 · 신논현', 'Precision Equipment', 'Lifting Program', 'After Care'];
+  const DELAY = 5000;
+  let idx = 0;
+  let timer = null;
+  let paused = false;
+
+  function setActive(next) {
+    idx = (next + total) % total;
+    imgs.forEach((el, i) => el.classList.toggle('is-active', i === idx));
+    texts.forEach((el, i) => el.classList.toggle('is-active', i === idx));
+    dots.forEach((el, i) => el.classList.toggle('is-active', i === idx));
+    if (loc && LOC_LABELS[idx]) loc.textContent = LOC_LABELS[idx];
+    restartProgress();
   }
-});
 
-// Pause progress + autoplay on hover
-const magSwiperEl = document.querySelector('.mag-swiper');
-if (magSwiperEl && magSwiper) {
-  magSwiperEl.addEventListener('mouseenter', () => {
-    magSwiper.autoplay?.stop();
-    if (magProgressBar) {
-      const computed = getComputedStyle(magProgressBar).width;
-      magProgressBar.style.transition = 'none';
-      magProgressBar.style.width = computed;
+  function restartProgress() {
+    if (!bar) return;
+    bar.style.transition = 'none';
+    bar.style.width = '0%';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      bar.style.transition = `width ${DELAY}ms linear`;
+      bar.style.width = '100%';
+    }));
+  }
+
+  function start() {
+    stop();
+    timer = setInterval(() => { if (!paused) setActive(idx + 1); }, DELAY);
+  }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+  dots.forEach(d => d.addEventListener('click', () => {
+    setActive(parseInt(d.dataset.magDot, 10));
+    start();
+  }));
+
+  card.addEventListener('mouseenter', () => {
+    paused = true;
+    if (bar) {
+      const w = getComputedStyle(bar).width;
+      bar.style.transition = 'none';
+      bar.style.width = w;
     }
   });
-  magSwiperEl.addEventListener('mouseleave', () => {
-    magSwiper.autoplay?.start();
-    if (magProgressBar) {
+  card.addEventListener('mouseleave', () => {
+    paused = false;
+    if (bar) {
       requestAnimationFrame(() => {
-        magProgressBar.style.transition = `width ${MAG_DELAY}ms linear`;
-        magProgressBar.style.width = '100%';
+        const remaining = 1 - parseFloat(getComputedStyle(bar).width) / card.querySelector('.mag-progress').getBoundingClientRect().width;
+        bar.style.transition = `width ${Math.max(800, DELAY * remaining)}ms linear`;
+        bar.style.width = '100%';
       });
     }
   });
-}
+
+  setActive(0);
+  start();
+})();
 
 // ── Review Image Swiper ────────────────────────────────────
 const reviewSwiper = new Swiper('.review-img-swiper', {
@@ -153,6 +163,8 @@ function setMobileMenuState(isOpen) {
   mobileNav.classList.toggle('open', isOpen);
   menuBtn.classList.toggle('is-open', isOpen);
   document.body.classList.toggle('nav-open', isOpen);
+  menuBtn.setAttribute('aria-expanded', String(isOpen));
+  menuBtn.setAttribute('aria-label', isOpen ? '모바일 메뉴 닫기' : '모바일 메뉴 열기');
 }
 
 menuBtn.addEventListener('click', () => {

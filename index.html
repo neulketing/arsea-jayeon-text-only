@@ -22,7 +22,7 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=mobile1">
 </head>
 <body>
 
@@ -43,7 +43,7 @@
       </ul>
     </nav>
     <a href="#contact" class="btn-cta">전화 예약</a>
-    <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="모바일 메뉴 열기" aria-controls="mobileNav" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -131,88 +131,67 @@
 <!-- ==================== SECTION 2: DIFFERENTIATOR ==================== -->
 <section id="differentiator">
   <div class="diff-inner">
-    <!-- Left: Auto-rotating magazine card -->
+    <!-- Left: Hero magazine card with rotating content -->
     <div class="diff-left">
-      <div class="mag-solo section-reveal">
-        <div class="swiper mag-swiper">
-          <div class="swiper-wrapper">
+      <div class="mag-card section-reveal">
+        <div class="mag-bg-stack">
+          <img src="assets/site-images/services/service-07.webp" alt="" class="mag-bg-img is-active" data-mag-img="0" loading="lazy">
+          <img src="assets/site-images/focus/focus-06.webp" alt="" class="mag-bg-img" data-mag-img="1" loading="lazy">
+          <img src="assets/site-images/focus/focus-09.webp" alt="" class="mag-bg-img" data-mag-img="2" loading="lazy">
+          <img src="assets/site-images/focus/focus-03.webp" alt="" class="mag-bg-img" data-mag-img="3" loading="lazy">
+          <div class="mag-bg-overlay"></div>
+        </div>
 
-            <!-- Slide 1 -->
-            <div class="swiper-slide mag-slide">
-              <img src="assets/site-images/services/service-07.webp" alt="자연예쁨 프라이빗 상담 공간" class="mag-slide-bg" loading="lazy">
-              <div class="mag-slide-body">
-                <div class="mag-slide-meta">
-                  <span class="mag-slide-brand">NATURAL BEAUTY CLINIC</span>
-                  <span class="mag-slide-divider"></span>
-                  <span class="mag-slide-loc">강남 · 신논현</span>
-                </div>
-                <p class="mag-slide-eyebrow">CHAPTER 01 · PRIVATE ROOM</p>
-                <h2 class="mag-slide-title"><span class="mag-slide-bar">|</span> 많은 사람이 꾸준히<br>자연예쁨을 찾는 이유</h2>
-                <p class="mag-slide-desc">
-                  차분한 프라이빗 룸에서 진행되는 1:1 상담.<br>
-                  일정과 피부 상태를 함께 보는 흐름이 오래 갑니다.
-                </p>
-              </div>
-            </div>
+        <div class="mag-progress"><span></span></div>
 
-            <!-- Slide 2 -->
-            <div class="swiper-slide mag-slide">
-              <img src="assets/site-images/focus/focus-06.webp" alt="정밀 시술 공간" class="mag-slide-bg" loading="lazy">
-              <div class="mag-slide-body">
-                <div class="mag-slide-meta">
-                  <span class="mag-slide-brand">NATURAL BEAUTY CLINIC</span>
-                  <span class="mag-slide-divider"></span>
-                  <span class="mag-slide-loc">Precision Equipment</span>
-                </div>
-                <p class="mag-slide-eyebrow">CHAPTER 02 · DEVICE FOCUS</p>
-                <h2 class="mag-slide-title"><span class="mag-slide-bar">|</span> 피부 고민에 맞춘<br>정밀 장비 시술</h2>
-                <p class="mag-slide-desc">
-                  피부 상태·다운타임·일정에 따라<br>
-                  장비와 강도를 다르게 조합합니다.
-                </p>
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide mag-slide">
-              <img src="assets/site-images/focus/focus-09.webp" alt="맞춤 리프팅 케어" class="mag-slide-bg" loading="lazy">
-              <div class="mag-slide-body">
-                <div class="mag-slide-meta">
-                  <span class="mag-slide-brand">NATURAL BEAUTY CLINIC</span>
-                  <span class="mag-slide-divider"></span>
-                  <span class="mag-slide-loc">Lifting Program</span>
-                </div>
-                <p class="mag-slide-eyebrow">CHAPTER 03 · LIFTING</p>
-                <h2 class="mag-slide-title"><span class="mag-slide-bar">|</span> 티 나지 않게 조정하는<br>맞춤 리프팅 케어</h2>
-                <p class="mag-slide-desc">
-                  얼굴 전체 비율과 표정을 함께 보며<br>
-                  자연스러운 인상으로 설계합니다.
-                </p>
-              </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="swiper-slide mag-slide">
-              <img src="assets/site-images/focus/focus-03.webp" alt="재생 케어" class="mag-slide-bg" loading="lazy">
-              <div class="mag-slide-body">
-                <div class="mag-slide-meta">
-                  <span class="mag-slide-brand">NATURAL BEAUTY CLINIC</span>
-                  <span class="mag-slide-divider"></span>
-                  <span class="mag-slide-loc">After Care</span>
-                </div>
-                <p class="mag-slide-eyebrow">CHAPTER 04 · FOLLOW-UP</p>
-                <h2 class="mag-slide-title"><span class="mag-slide-bar">|</span> 시술 이후까지<br>끊기지 않는 사후 관리</h2>
-                <p class="mag-slide-desc">
-                  붓기·재생·홈케어 가이드까지<br>
-                  효과가 오래 가도록 함께 합니다.
-                </p>
-              </div>
-            </div>
-
+        <div class="mag-body">
+          <div class="mag-meta">
+            <span class="mag-brand">NATURAL BEAUTY CLINIC</span>
+            <span class="mag-divider"></span>
+            <span class="mag-loc" data-mag-loc>강남 · 신논현</span>
           </div>
-          <!-- Progress / pagination -->
-          <div class="mag-swiper-pagination"></div>
-          <div class="mag-swiper-progress"><span></span></div>
+
+          <div class="mag-text-stack">
+            <div class="mag-text is-active" data-mag-text="0">
+              <p class="mag-eyebrow">CHAPTER 01 · PRIVATE ROOM</p>
+              <h2 class="mag-title"><span class="mag-bar">|</span> 많은 사람이 꾸준히<br>자연예쁨을 찾는 이유</h2>
+              <p class="mag-desc">
+                차분한 프라이빗 룸에서 진행되는 1:1 상담.<br>
+                일정과 피부 상태를 함께 보는 흐름이 오래 갑니다.
+              </p>
+            </div>
+            <div class="mag-text" data-mag-text="1">
+              <p class="mag-eyebrow">CHAPTER 02 · DEVICE FOCUS</p>
+              <h2 class="mag-title"><span class="mag-bar">|</span> 피부 고민에 맞춘<br>정밀 장비 시술</h2>
+              <p class="mag-desc">
+                피부 상태·다운타임·일정에 따라<br>
+                장비와 강도를 다르게 조합합니다.
+              </p>
+            </div>
+            <div class="mag-text" data-mag-text="2">
+              <p class="mag-eyebrow">CHAPTER 03 · LIFTING</p>
+              <h2 class="mag-title"><span class="mag-bar">|</span> 티 나지 않게 조정하는<br>맞춤 리프팅 케어</h2>
+              <p class="mag-desc">
+                얼굴 전체 비율과 표정을 함께 보며<br>
+                자연스러운 인상으로 설계합니다.
+              </p>
+            </div>
+            <div class="mag-text" data-mag-text="3">
+              <p class="mag-eyebrow">CHAPTER 04 · FOLLOW-UP</p>
+              <h2 class="mag-title"><span class="mag-bar">|</span> 시술 이후까지<br>끊기지 않는 사후 관리</h2>
+              <p class="mag-desc">
+                붓기·재생·홈케어 가이드까지<br>
+                효과가 오래 가도록 함께 합니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="mag-dots">
+            <button type="button" class="mag-dot is-active" data-mag-dot="0" aria-label="슬라이드 1"></button>
+            <button type="button" class="mag-dot" data-mag-dot="1" aria-label="슬라이드 2"></button>
+            <button type="button" class="mag-dot" data-mag-dot="2" aria-label="슬라이드 3"></button>
+            <button type="button" class="mag-dot" data-mag-dot="3" aria-label="슬라이드 4"></button>
+          </div>
         </div>
 
         <a href="#contact" class="mag-cta">
@@ -826,6 +805,6 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script.js?v=mobile1"></script>
 </body>
 </html>
