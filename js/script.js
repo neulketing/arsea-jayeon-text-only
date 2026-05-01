@@ -23,10 +23,12 @@ const heroSwiper = new Swiper('.hero-swiper', {
       const badge = slide.querySelector('.hero-badge');
       const title = slide.querySelector('.hero-title');
       const desc  = slide.querySelector('.hero-desc');
+      const eventCard = slide.querySelector('.hero-event-card');
+      const actions = slide.querySelector('.hero-actions');
       document.querySelectorAll('.hero-content').forEach(content => {
         content.style.transform = '';
       });
-      [badge, title, desc].forEach(el => {
+      [badge, title, desc, eventCard, actions].forEach(el => {
         if (!el) return;
         el.style.animation = 'none';
         el.offsetHeight;
@@ -331,12 +333,11 @@ function validateStep(step) {
       return false;
     }
 
-    // Phone validation: at least first segment must be filled
-    const phoneInputs = page.querySelectorAll('.phone-group input');
-    const firstPhone = phoneInputs[0];
-    const phoneVal = Array.from(phoneInputs).map(i => i.value.trim()).join('');
-    if (firstPhone && phoneVal.length < 8) {
-      setFieldError(firstPhone, '연락처를 정확히 입력해주세요.');
+    // Phone validation: digits-only length must be 10~11
+    const phoneInput = page.querySelector('input[name="phone"]');
+    const phoneDigits = phoneInput ? phoneInput.value.replace(/\D/g, '') : '';
+    if (!phoneInput || phoneDigits.length < 10 || phoneDigits.length > 11) {
+      setFieldError(phoneInput, '연락처를 정확히 입력해주세요. (예: 010-0000-0000)');
       return false;
     }
 
@@ -390,8 +391,7 @@ function collectFormData() {
 
   const nameVal    = step1.querySelector('input[name="name"]')?.value.trim() || '';
   const emailVal   = step1.querySelector('input[name="email"]')?.value.trim() || '';
-  const phoneInputs = step1.querySelectorAll('.phone-group input');
-  const phoneVal   = Array.from(phoneInputs).map(i => i.value.trim()).filter(Boolean).join('-');
+  const phoneVal   = step1.querySelector('input[name="phone"]')?.value.trim() || '';
   const concernVal = step2.querySelector('select[name="concern"]')?.value || '';
   const budgetVal  = step2.querySelector('input[name="budget"]')?.value.trim() || '';
   const dateVal    = step2.querySelector('input[name="preferred_date"]')?.value || '';
@@ -500,7 +500,7 @@ if (portfolioScroll) {
 }
 
 // ── Enhanced Scroll Reveal ─────────────────────────────────
-const revealEls = document.querySelectorAll('.diff-card, .service-card, .process-step, .director-media, .director-card, .faq-item, .portfolio-item');
+const revealEls = document.querySelectorAll('.diff-card, .event-panel, .event-point, .case-card, .service-card, .process-step, .director-media, .director-card, .faq-item, .portfolio-item');
 revealEls.forEach(el => el.classList.add('reveal'));
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -546,7 +546,7 @@ document.querySelectorAll('.diff-card').forEach(card => {
 function initMagneticButtons() {
   if (window.innerWidth <= 768 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  document.querySelectorAll('.btn-cta, .btn-kakao, .btn-director, .btn-portfolio, .btn-review-more').forEach(btn => {
+  document.querySelectorAll('.btn-cta, .btn-kakao, .btn-director, .btn-portfolio, .btn-review-more, .btn-hero-primary, .btn-hero-secondary, .event-cta').forEach(btn => {
     btn.addEventListener('mousemove', e => {
       const rect = btn.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
@@ -632,3 +632,58 @@ createHeroParticles();
 initMagneticButtons();
 initScrollParallax();
 initHeroTextEffect();
+
+// ── Cases (Before & After) tab toggle ─────────────────────
+(function initCasesTabs() {
+  const tabs = document.querySelectorAll('.cases-tab');
+  const panels = document.querySelectorAll('.cases-panel');
+  if (!tabs.length || !panels.length) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.casesTab;
+      tabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle('is-active', isActive);
+        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      panels.forEach((p) => {
+        const isActive = p.dataset.casesPanel === target;
+        p.classList.toggle('is-active', isActive);
+        if (isActive) {
+          p.removeAttribute('hidden');
+        } else {
+          p.setAttribute('hidden', '');
+        }
+      });
+    });
+  });
+})();
+
+// ── Phone auto-format (010-0000-0000) ─────────────────────
+(function initPhoneMask() {
+  const input = document.getElementById('inputPhone');
+  if (!input) return;
+
+  const format = (digits) => {
+    digits = digits.replace(/\D/g, '').slice(0, 11);
+    if (digits.length < 4) return digits;
+    if (digits.length < 7) return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+    if (digits.length < 11) return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+    return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`;
+  };
+
+  input.addEventListener('input', (e) => {
+    const before = e.target.value;
+    const formatted = format(before);
+    if (before !== formatted) {
+      e.target.value = formatted;
+    }
+  });
+
+  input.addEventListener('paste', (e) => {
+    e.preventDefault();
+    const pasted = (e.clipboardData || window.clipboardData).getData('text');
+    e.target.value = format(pasted);
+  });
+})();
